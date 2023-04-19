@@ -1,0 +1,36 @@
+number_1 = float(input("Ievadi pirmo skaitli: "))
+number_2 = float(input("Ievadi otro skaitli: "))
+
+print('''Lūdzu, izvēlies kalkulatora funkciju:
++, lai saskaitītu
+-, lai atņemtu
+*, lai sareizinātu
+/, lai dalītu,
+%, lai dalītu ar atlikumu
+''')
+
+operation = input("Ieraksti izvēlēto funkciju: ")
+    
+if operation == "+":
+    print('{} + {} = '.format(number_1, number_2))
+    print(number_1+number_2)
+elif operation == "-":
+    print('{} - {} = '.format(number_1, number_2))
+    print(number_1-number_2)
+elif operation == "*":
+    print('{} * {} = '.format(number_1, number_2))
+    print(number_1*number_2)
+elif operation == "/":
+    if number_2 == 0:
+        print("Kļūda, ar 0 dalīt nedrīkst!")
+    else:
+        print('{} / {} = '.format(number_1, number_2))
+        print(number_1/number_2)
+elif operation == "%":
+    if number_2 == 0:
+        print("Kļūda, ar 0 dalīt nedrīkst!")
+    else:
+        print('{} / {} = '.format(number_1, number_2))
+        print(number_1/number_2, number_1%number_2)
+else:
+    print("Veic izvēli!")
